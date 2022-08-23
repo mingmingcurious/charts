@@ -1,0 +1,43 @@
+#database persistence
+#Need HA Read this address https://polyaxon.com/docs/setup/platform/postgresql-ha/
+#内部持久化 建立pv pvc
+postgresql:
+  persistence:
+    enabled: true
+    existingClaim: pgdata
+    size: 2Gi
+
+#API Host
+#In order to receive email and notification with a clickable links to the objects on the platform
+hostName: 192.168.29.100
+
+
+#UI
+#Polyaxon UI comes with several flags to:
+#Disable the UI in case the API is used for submitting jobs and programmatic use with other tools.
+#Enable the admin Dashboard.
+#Enable the offline mode, by default some dependencies are loaded from CDN and require access to the internet, 
+#if the end users have no access to the internet you can serve these dependencies using the offline mode.
+ui:
+  enabled: true
+  offline: false
+  adminEnabled: true
+
+
+#Replication & Concurrency
+#https://polyaxon.com/docs/setup/platform/replication-concurrency/
+
+#Root user
+#The default superuser/root user for polyaxon. You can set a password or a random password will be generated that you can retrieve later.
+user:
+  username: "realbcm"
+  email: "rootuser@polyaxon.local"
+  password: "realbcm"
+
+
+intervals:  # in seconds
+  runsScheduler: 15
+  operationsDefaultRetryDelay: 60
+  operationsMaxRetryDelay: 3600
+  compatibilityCheck: -1
+
