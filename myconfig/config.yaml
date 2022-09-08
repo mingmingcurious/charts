@@ -44,8 +44,13 @@ intervals:  # in seconds
 
 # 自定义连接 
 connections:
-  - name: my-artifacts-store
+  - name: dbydata-host-path
     kind: host_path
     schema:
       mountPath: "/artifacts"
       hostPath: "/opt/dbydata/plx_data/artifacts"
+  - name: dbydata-s3
+    kind: s3
+    schema: {"bucket": "s3://bucket/"}
+    secret:
+      name: "s3-secret"
