@@ -51,9 +51,9 @@ artifactsStore:
 
 
 # 自定义连接 
-connections:
-  - name: dbydata-s3
-    kind: s3
-    schema: {"bucket": "s3://dbybucket-mlops/"}
-    secret:
-      name: "s3-secret"
+# connections:
+#   - name: dbydata-s3
+#     kind: s3
+#     schema: {"bucket": "s3://dbybucket-mlops/"}
+#     secret:
+#       name: "s3-secret"
