@@ -42,7 +42,7 @@ intervals:  # in seconds
   compatibilityCheck: -1
 
 artifactsStore:
-  name: dbydata-s3
+  name: dbydata-s3-test
   kind: s3
   schema: {"bucket": "s3://dbybucket-mlops/"}
   secret:
