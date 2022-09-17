@@ -42,11 +42,11 @@ intervals:  # in seconds
   compatibilityCheck: -1
 
 artifactsStore:
-  name: dbydata-s3-test
+  name: dbydata-minio
   kind: s3
-  schema: {"bucket": "s3://dbybucket-mlops/"}
+  schema: {"bucket": "s3://dbybucket-mlops-plx/"}
   secret:
-    name: "s3-secret"
+    name: "dbydata-minio-secret"
 
 
 
