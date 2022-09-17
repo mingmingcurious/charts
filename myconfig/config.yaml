@@ -41,8 +41,9 @@ intervals:  # in seconds
   operationsMaxRetryDelay: 3600
   compatibilityCheck: -1
 
+#plx系统数据bucket
 artifactsStore:
-  name: dbydata-minio
+  name: dbybucket-mlops-plx
   kind: s3
   schema: {"bucket": "s3://dbybucket-mlops-plx/"}
   secret:
@@ -50,10 +51,10 @@ artifactsStore:
 
 
 
-# 自定义连接 
-# connections:
-#   - name: dbydata-s3
-#     kind: s3
-#     schema: {"bucket": "s3://dbybucket-mlops/"}
-#     secret:
-#       name: "s3-secret"
+# 业务数据bucket 
+connections:
+  - name: dbybucket-mlops
+    kind: s3
+    schema: {"bucket": "s3://dbybucket-mlops/"}
+    secret:
+      name: "dbydata-minio-secret"
