@@ -43,7 +43,7 @@ intervals:  # in seconds
 
 #plx系统数据bucket
 artifactsStore:
-  name: dbybucket-mlops-plx
+  name: s3-dbybucket-mlops-plx
   kind: s3
   schema: {"bucket": "s3://dbybucket-mlops-plx/"}
   secret:
@@ -53,8 +53,15 @@ artifactsStore:
 
 # 业务数据bucket 
 connections:
-  - name: dbybucket-mlops
+  - name: s3-dbybucket-mlops
     kind: s3
     schema: {"bucket": "s3://dbybucket-mlops/"}
     secret:
       name: "dbydata-minio-secret"
+  - name: registry-dbydocker-repo
+    kind: registry
+    schema:
+      url: image.io
+    secret:
+      name: docker-conf
+      mountPath: /kaniko/.docker
