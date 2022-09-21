@@ -62,6 +62,7 @@ connections:
     kind: registry
     schema:
       url: image.io
+      insecure: true
     secret:
       name: docker-conf
       mountPath: /kaniko/.docker
