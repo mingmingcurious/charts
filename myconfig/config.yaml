@@ -61,7 +61,7 @@ connections:
   - name: registry-dbydocker-repo
     kind: registry
     schema:
-      url: image.io
+      url: http://image.io
     secret:
       name: docker-conf
       mountPath: /kaniko/.docker
