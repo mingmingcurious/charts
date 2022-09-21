@@ -58,10 +58,10 @@ connections:
     schema: {"bucket": "s3://dbybucket-mlops/"}
     secret:
       name: "dbydata-minio-secret"
-  - name: registry-dbydocker-repo
+  - name: registry-polyaxon
     kind: registry
     schema:
-      url: http://image.io
+      url: http://172.16.1.33/polyaxon
     secret:
       name: docker-conf
       mountPath: /kaniko/.docker
