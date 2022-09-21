@@ -61,7 +61,7 @@ connections:
   - name: registry-polyaxon
     kind: registry
     schema:
-      url: http://172.16.1.33/polyaxon
+      url: http://172.16.1.33
     secret:
       name: docker-conf
       mountPath: /kaniko/.docker
