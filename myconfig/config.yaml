@@ -61,7 +61,7 @@ connections:
   - name: registry-polyaxon
     kind: registry
     schema:
-      url: https://image.io
+      url: http://image.io
     secret:
       name: docker-conf
       mountPath: /kaniko/.docker
