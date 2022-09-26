@@ -9,8 +9,8 @@ postgresql:
 
 #API Host
 #In order to receive email and notification with a clickable links to the objects on the platform
-hostName: 192.168.29.100
-
+#hostName: 192.168.29.100
+hostName: 172.16.1.101
 
 #UI
 #Polyaxon UI comes with several flags to:
